@@ -6,14 +6,15 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shoppinglist.R
-import com.example.shoppinglist.data.databse.ShoppingDatabase
 import com.example.shoppinglist.data.ShoppingRepository
+import com.example.shoppinglist.data.databse.ShoppingDatabase
 import kotlinx.android.synthetic.main.activity_shopping.*
 
 class ShoppingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shopping)
+
 
         val database = ShoppingDatabase(this)
         val repository = ShoppingRepository(database)
